@@ -1,3 +1,5 @@
+# to use PIL
+# need execute 'python -m pip install Image'
 import PIL.Image
 import urllib
 import re

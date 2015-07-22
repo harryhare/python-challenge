@@ -1,4 +1,5 @@
 import pickle
+level_url='http://www.pythonchallenge.com/pc/def/peak.html'
 pfile=open('banner.p','r')
 x=pickle.load(pfile)
 str=''

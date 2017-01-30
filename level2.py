@@ -1,4 +1,5 @@
 import pdb
+import string
 input="g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj. "
 def fun(x):
 	print("xxxxxxxxxxxxxxxxxxxxxxxxxx")
@@ -15,3 +16,6 @@ def fun(x):
 	print(result)
 	return result
 fun(input)
+x = string.maketrans("abcdefghigklmnopqrstuvwxyz", "cdefghigklmnopqrstuvwxyzab")
+input.translate(x)
+print (string.translate("map",x))

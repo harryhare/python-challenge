@@ -6,8 +6,9 @@ import urllib
 import PIL.Image as Image
 png_file=urllib.urlopen(png_url)
 png=Image.open(png_file)
-png.show()
+#png.show()
 png_new=Image.new('RGB',(100,100))
+png_wrong=Image.new("RGB",(100,100))
 x=0
 y=0
 left=0
@@ -21,6 +22,7 @@ step=[(1,0),(0,1),(-1,0),(0,-1)]
 for i in range(0,10000):
     color=png.getpixel((i,0))
     png_new.putpixel((x,y),color)
+    png_wrong.putpixel((i%100,i//100),color)
     if(x==right and d==0):
         d=1
         up+=1
@@ -36,7 +38,8 @@ for i in range(0,10000):
     x+=step[d][0]
     y+=step[d][1]
 png_new.show()
-        
+png_wrong.show()
+
 #cat
 #uzi
 

@@ -23,4 +23,5 @@ while True:
 log=log.replace('r','\n')
 log=log.replace("z"," ")
 print log
-print log[::-1]
+#print log[::-1]
+#copper

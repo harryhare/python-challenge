@@ -5,7 +5,7 @@ def call(name):
     answer=phonebook.phone(name)
     return answer
 
-if __name__=="main":
+if __name__=="__main__":
     level_url='http://www.pythonchallenge.com/pc/return/disproportional.html'
     xml_url='http://www.pythonchallenge.com/pc/phonebook.php'
     phonebook=xmlrpclib.ServerProxy(xml_url)

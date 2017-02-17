@@ -74,9 +74,12 @@ def solve(h,v,lh,lv):
             for j in range(v):
                 shouldbe = mark[i * v + j]
                 if shouldbe != -1:#deleted
+                    newp=[]
                     for x in p:
-                        if x[j] != shouldbe:
-                            p.remove(x)
+                        if x[j] == shouldbe:
+                            newp.append(x)
+                    p=newp
+                    h_possibles[i]=p
             for j in range(v):
                 if mark[i * v + j] == -1:#determine
                     p0=copy.copy(p[0])
@@ -98,9 +101,12 @@ def solve(h,v,lh,lv):
             for i in range(h):
                 shouldbe = mark[i * v + j]
                 if shouldbe != -1:#deleted
+                    newp = []
                     for x in p:
-                        if x[i] != shouldbe:
-                            p.remove(x)
+                        if x[i] == shouldbe:
+                            newp.append(x)
+                    p=newp
+                    v_possibles[j]=p
             for i in range(h):
                 if mark[i * v + j] == -1:#determine
                     p0=copy.copy(p[0])

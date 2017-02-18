@@ -1,3 +1,5 @@
 # python-challenge
+
 for game http://www.pythonchallenge.com/
-the files have name 1 bigge than the conresponding level
+
+The files have names 1 bigger than the conresponding levels

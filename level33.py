@@ -30,8 +30,8 @@ def read(url):
             if len(l) == h:
                 lineindex += 2
                 break
-    print(horizonal)
-    print(vertical)
+    #print(horizonal)
+    #print(vertical)
     return h, v, horizonal, vertical
 
 
@@ -128,12 +128,13 @@ def solve(h,v,lh,lv):
     #print(v_possibles)
     return (mark,h_possibles,v_possibles)
 
-# h, v, lh, lv = read(warmup_url)
-# solve(h, v, lh, lv)
-h, v, lh, lv = read(up_url)
-(mark, hp, vp)=solve(h, v, lh, lv)
-image=Image.new("1",(v,h))
-image.putdata(mark)
-image.save("./level33/level33.bmp")
-# python
-# beer
+if __name__=="__main__":
+    # h, v, lh, lv = read(warmup_url)
+    # solve(h, v, lh, lv)
+    h, v, lh, lv = read(up_url)
+    (mark, hp, vp)=solve(h, v, lh, lv)
+    image=Image.new("1",(v,h))
+    image.putdata(mark)
+    image.save("./level33/level33.bmp")
+    # python
+    # beer
